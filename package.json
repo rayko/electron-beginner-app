@@ -3,20 +3,35 @@
   "version": "0.0.1",
   "description": "Electron sample application",
   "main": "main.js",
+  "author": "Rayko <rayko.drg@gmail.com>",
+  "license": "MIT-0",
+  "postinstall": "electron-builder install-app-deps",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -wl"
   },
-  "author": "Rayko",
-  "license": "MIT-0",
+
   "devDependencies": {
     "electron": "^17.1.2",
     "electron-builder": "^22.14.13"
   },
-  "dependencies": {
 
-  },
-  "config": {
+  "dependencies": {},
 
+  "config": {},
+
+  "build": {
+    "appId": "example-test-app",
+
+    "linux": {
+      "target": ["AppImage", "deb"]
+    },
+    
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    }
   }
 }
