@@ -25,6 +25,10 @@
   "build": {
     "appId": "example-test-app",
 
+    "portable": {
+      "splashImage": "build/splash.bmp"
+    },
+
     "linux": {
       "target": ["AppImage", "deb"]
     },
