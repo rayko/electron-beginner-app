@@ -8,31 +8,28 @@
   "postinstall": "electron-builder install-app-deps",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
+    "start": "npm run compile && electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder -wl"
+    "dist": "electron-builder -wl",
+    "compile": "tsc"
   },
-
   "devDependencies": {
     "electron": "^17.1.2",
-    "electron-builder": "^22.14.13"
+    "electron-builder": "^22.14.13",
+    "typescript": "^4.6.2"
   },
-
-  "dependencies": {},
-
   "config": {},
-
   "build": {
     "appId": "example-test-app",
-
     "portable": {
       "splashImage": "build/splash.bmp"
     },
-
     "linux": {
-      "target": ["AppImage", "deb"]
+      "target": [
+        "AppImage",
+        "deb"
+      ]
     },
-    
     "win": {
       "target": "portable",
       "icon": "build/icon.ico"
