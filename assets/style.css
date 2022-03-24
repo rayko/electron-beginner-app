@@ -1,0 +1,108 @@
+body {
+    background-color: lightblue;
+    position: absolute;
+    display: block;
+    font-family: monospace;
+    font-size: 1.3em;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+    background-color: cadetblue;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 0.3em;
+}
+
+.container {
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: justify;
+}
+
+.subtitle {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.table-desc {
+    font-size: 0.7em;
+    font-style: italic;
+    color: gray;
+}
+
+table {
+    background-color: lightgray;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+table, th, td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+td {
+    padding: 0.3em;
+}
+
+th {
+    text-align: center;
+    background-color: burlywood;
+}
+
+.good-status{
+    background-color: lightgreen;
+    color: gray;
+}
+
+.bad-status {
+    background-color: lightsalmon;
+    color: gray;
+}
+
+.spacer{
+    height: 0.2em;
+    border-bottom: 1px solid lightseagreen;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+}
+
+.footer {
+    background-color: cadetblue;
+    position: relative;
+    top: 7em;
+    padding: 0.3em;
+    text-align: center;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+}
+
+.footer .footer-link {
+    display: inline-block;
+    width: 10em;
+    background-color: lightseagreen;
+    border-radius: 20px;
+}
+
+.footer-link a {
+    text-decoration: none;
+    color: gray;
+}
+
+.footer-link:hover {
+    background-color: white;
+    cursor: pointer;
+}
+

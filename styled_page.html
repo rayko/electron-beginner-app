@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Styled Page</title>
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <h1 class="page-title">Style Attempt</h1>
+    <div class="container">
+      <p class="subtitle">
+        In this page, I try to add some CSS to make things look nicer and less 90's.
+      </p>
+
+      <span class="table-desc">This table makes no sense</span>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Distance</th>
+          <th>Color</th>
+          <th>Status</th>
+        </tr>
+
+        <tr>
+          <td>Headphones</td>
+          <td>35 cm</td>
+          <td>Gray</td>
+          <td class="good-status">Working</td>
+        </tr>
+
+        <tr>
+          <td>Portable HDD</td>
+          <td>50 cm</td>
+          <td>Black</td>
+          <td class="good-status">Seen</td>
+        </tr>
+
+        <tr>
+          <td>Phone</td>
+          <td class="unknown-val">Unknown</td>
+          <td>Black</td>
+          <td class="bad-status">Missing</td>
+        </tr>
+
+        <tr>
+          <td>Laptop</td>
+          <td>20 cm</td>
+          <td>Silver</td>
+          <td class="good-status">Working</td>
+        </tr>
+      </table>
+
+      <div class="spacer"></div>
+
+      <div class="quote">Some famous quote by someone here</div>
+
+    </div>
+
+    <div class="footer">
+      <div class="footer-link"><a href="#" class="about-link">About</a></div>
+      <div class="footer-link"><a href="#" class="wisdom-link">Wisdom</a></div>
+      <div class="footer-link"><a href="#" class="contact-link">Contact</a></div>
+    </div>
+
+  </body>
+</html>
