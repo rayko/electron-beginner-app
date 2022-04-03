@@ -1,14 +1,17 @@
 #directories
-bower_components
-node_modules
-dist
+bower_components/
+dist/
 
 #files
 *.tgz
 *.log
 *~
-
-out/
-tmp/
-
 main.js
+
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
+out/
