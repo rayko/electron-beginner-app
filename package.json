@@ -2,13 +2,20 @@
    "name": "example",
    "version": "0.0.1",
    "description": "Electron sample application",
-   "main": "main.js",
    "author": "Rayko <rayko.drg@gmail.com>",
    "license": "MIT-0",
    "postinstall": "electron-builder install-app-deps",
+   "repository": {
+     "type": "git",
+     "url": "https://github.com/rayko/electron-beginner-app.git"
+   },
+   "bugs": {
+     "url": "https://github.com/rayko/electron-beginner-app/issues"
+   },
    "scripts": {
+      "start": "compile && electron src/index.js",
+      "postinstall": "install-app-deps"
       "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "ts-node src/index.ts",
       "pack": "electron-builder --dir",
       "dist": "electron-builder -wl",
       "compile": "tsc",
