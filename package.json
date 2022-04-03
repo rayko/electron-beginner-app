@@ -1,38 +1,53 @@
 {
-  "name": "example",
-  "version": "0.0.1",
-  "description": "Electron sample application",
-  "main": "main.js",
-  "author": "Rayko <rayko.drg@gmail.com>",
-  "license": "MIT-0",
-  "postinstall": "electron-builder install-app-deps",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run compile && electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder -wl",
-    "compile": "tsc"
-  },
-  "devDependencies": {
-    "electron": "^17.1.2",
-    "electron-builder": "^22.14.13",
-    "typescript": "^4.6.2"
-  },
-  "config": {},
-  "build": {
-    "appId": "example-test-app",
-    "portable": {
-      "splashImage": "build/splash.bmp"
-    },
-    "linux": {
-      "target": [
-        "AppImage",
-        "deb"
-      ]
-    },
-    "win": {
-      "target": "portable",
-      "icon": "build/icon.ico"
-    }
-  }
+   "name": "example",
+   "version": "0.0.1",
+   "description": "Electron sample application",
+   "author": "Rayko <rayko.drg@gmail.com>",
+   "license": "MIT-0",
+   "postinstall": "electron-builder install-app-deps",
+   "repository": {
+     "type": "git",
+     "url": "https://github.com/rayko/electron-beginner-app.git"
+   },
+   "bugs": {
+     "url": "https://github.com/rayko/electron-beginner-app/issues"
+   },
+   "scripts": {
+      "start": "npm run compile && electron build/src/index.js",
+      "postinstall": "install-app-deps",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "pack": "npm run compile && electron-builder --dir",
+      "dist": "npm run compile && electron-builder -wl",
+      "compile": "tsc",
+      "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
+   },
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "electron": "^17.1.2",
+      "electron-builder": "^22.14.13",
+      "typescript": "4.6.3",
+      "ts-node": "3.3.0"
+   },
+   "config": {},
+   "build": {
+      "appId": "example-test-app",
+      "portable": {
+         "splashImage": "build/assets/images/splash.bmp"
+      },
+      "linux": {
+         "target": [
+            "AppImage",
+            "deb"
+         ]
+      },
+      "win": {
+         "target": "portable",
+         "icon": "build/assets/images/icon.ico"
+      }
+   },
+   "dependencies": {
+      "reflect-metadata": "^0.1.10",
+      "sqlite3": "^4.0.3",
+      "typeorm": "0.2.41"
+   }
 }
