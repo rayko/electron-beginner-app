@@ -6,12 +6,12 @@ dist/
 *.tgz
 *.log
 *~
-main.js
+build/**/*.js
+build/**/*.js.map
 
 .idea/
 .vscode/
 node_modules/
-build/
 tmp/
 temp/
 out/
